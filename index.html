@@ -1,37 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css">
     <title>Weather Application</title>
 </head>
+
 <body>
-    <header>
-        <form>
-            <input type="search" placeholder = Enter a city...required />
-            <input type="submit" value = "search" />
-        </form>
-    </header>
-    <main>
-        <div>
-            <h1>London</h1>
-        </div>
-        <p>
-            Monday 13:40, scattered clouds
-            <br/>
-            Humidity:45%, Wind: 3.13 km/h 
-        </p>
-        <div>
-            ⛅ 13&deg;C
-        </div>
-    </main>
-    <footer> 
-       This project was coded by 
-        <a href="https://github.com/kgotsofatsomotth/" target="_blank"> Kgotsofatso Mothemele</a>, is 
-        <a href="https://github.com/kgotsofatsomotth/application-for-weather" target="_blank"> open-sourced on GitHub</a> and 
-        <a href="https://your-weather-updates.netlify.app/" target="_blank"> hosted on Netlify </a>
+    <div class="weather-app">
+        <header>
+            <form class="search-form">
+                <input type="search" placeholder=Enter a city...required class="search-form-input" />
+                <input type="submit" value="search" class="search-form-button" />
+            </form>
+        </header>
 
-
-    </footer>
+        <main>
+            <div class="weather-app-data">
+                <div>
+                    <h1 class="weather-app-city">London</h1>
+                    <p class="weather-app-details">
+                        Monday 13:40, scattered clouds
+                        <br />
+                        Humidity:<strong>45%</strong>, Wind:<strong>3.13 km/h </strong>
+                    </p>
+                </div>
+                <div class="weather-app-temperature-container">
+                    <div class="weather-app-icon">⛅</div>
+                    <div class="weather-app-temperature"> 13</div>
+                    <div class="weather-app-unit">&deg;C</div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            This project was coded by
+            <a href="https://github.com/kgotsofatsomotth/" target="_blank"> Kgotsofatso Mothemele</a>, is
+            <a href="https://github.com/kgotsofatsomotth/application-for-weather" target="_blank"> open-sourced on
+                GitHub</a> and
+            <a href="https://your-weather-updates.netlify.app/" target="_blank"> hosted on Netlify </a>
+        </footer>
+    </div>
 </body>
+
 </html>
