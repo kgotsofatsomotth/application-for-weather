@@ -7,9 +7,9 @@ function refreshWeather(response) {
   let windSpeedElement = document.querySelector("#wind-speed");
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
-  let iconElement=document.querySelector("#icon");
+  let iconElement = document.querySelector("#icon");
 
-  iconElement.innerHTML= `<img src="${response.data.condition.icon_url}" class="weather-app-icon"/>`;
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon"/>`;
 
   cityElement.innerHTML = response.data.city;
   timeElement.innerHTML = formatDate(date);
@@ -51,8 +51,32 @@ function handleSearchSubmit(event) {
 
   searchCity(searchInput.value);
 }
+function displayForecast() {
+  let days = ["Tue", "Wed", "Thur", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+    <div class="weather-forecast-day">
+      <div class="weather-forecast-date">${day}</div>
+      <div class="weather-forecast-icon">⛅</div>
+      <div class="weather-forecast-temperatures">
+      <div class="weather-forecast-temperature">
+        <strong>15&deg;</strong>
+        </div>
+        <div class="weather-forecast-temperature">9&deg;</div>
+        </div>
+        </div>
+        `;
+  });
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("London");
+displayForecast();
