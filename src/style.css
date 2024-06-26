@@ -86,9 +86,6 @@ main {
   text-align: center;
   color: rgba(39, 33, 66, 0.4);
 }
-.weather-forecast-temperature-min {
-  opacity: 0.5;
-}
 .weather-forecast-temperatures {
   text-align: center;
   margin-top: 8px;
@@ -101,9 +98,7 @@ main {
   width: 80px;
   height: 80px;
   margin: 0 auto;
-  display: flex;
-
 }
-.weather-forecast-temperature{
+.weather-forecast-temperature {
   padding: 0 10px;
 }
